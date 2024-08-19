@@ -7,11 +7,13 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "tsc && vite build && vite preview"
   },
   "dependencies": {
+    "@r2wc/react-to-web-component": "^2.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-web-component": "^2.0.2",
     "sass": "^1.68.0"
   },
   "devDependencies": {

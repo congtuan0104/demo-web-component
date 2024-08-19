@@ -1,7 +1,7 @@
 import { Subscription } from "./components/Subscription";
 
 function App() {
-  return <Subscription shouldDisplayMentions username="Nicolas" />;
+  return <Subscription name="Nicolas" count={0} />;
 }
 
 export default App;

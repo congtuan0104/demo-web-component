@@ -2,35 +2,24 @@ import { FC } from "react";
 import styles from "./Subscription.scss?inline";
 
 export interface ISubscriptionProps {
-  username: string;
-  shouldDisplayMentions?: boolean;
+  name: string;
+  count: number;
+  decrease?: () => void;
 }
 
 export const Subscription: FC<ISubscriptionProps> = ({
-  username,
-  shouldDisplayMentions,
+  name,
+  count,
+  decrease,
 }: ISubscriptionProps) => {
   return (
     <>
       <style>{styles}</style>
       <div className="subscription">
-        <h2 className="subscription__title">Subscription</h2>
-        <p className="subscription__greeting">Hello {username}!</p>
+        <p className="subscription__greeting">Hello {name}!</p>
+        <h2 className="subscription__title">Count: {count}</h2>
 
-        <label htmlFor="email">
-          <input
-            id="email"
-            type="email"
-            className="subscription__input"
-            placeholder="Enter your email"
-          />
-        </label>
-
-        {shouldDisplayMentions && (
-          <p className="subscription__mentions">
-            My mention should be display here...
-          </p>
-        )}
+        <button className="subscription__button" onClick={decrease}>Decrease</button>
       </div>
     </>
   );

@@ -1,4 +1,5 @@
+// import WebGreeting from "./components/WebGreeting";
 import SubscriptionWebComponent from "./web-component";
 
-// Mandatory to have two part
-customElements.define("my-subscription", SubscriptionWebComponent);
+customElements.define("my-component", SubscriptionWebComponent);
+

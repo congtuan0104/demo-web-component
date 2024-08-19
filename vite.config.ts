@@ -13,8 +13,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: "./src/index.tsx",
-      name: "subscription",
-      fileName: (format) => `subscription.${format}.js`,
+      name: "demo",
+      fileName: (format) => `demo.${format}.js`,
     },
     target: "es2015",
   },
